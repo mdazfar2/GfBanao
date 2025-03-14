@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Heart, Code } from 'lucide-react';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleJoinNowClick = () => {
+    navigate('/dashboard');
+  };
+
   return (
     <section className="min-h-screen relative flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
@@ -35,8 +42,11 @@ const Hero = () => {
           Find your perfect match while leveling up your skills in technology.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="group relative px-8 py-4 text-lg font-medium rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-            Join Now
+          <button
+            className="group relative px-8 py-4 text-lg font-medium rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            onClick={handleJoinNowClick}
+          >
+            Go Feed
             <ArrowRight className="inline-block ml-2 h-5 w-5 transform transition-transform group-hover:translate-x-1" />
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-lg" />
           </button>

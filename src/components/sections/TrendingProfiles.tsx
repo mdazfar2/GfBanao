@@ -6,24 +6,24 @@ const profiles = [
     name: "Nitish Kumar",
     role: "AI Specialist",
     status: "Looking for Tech Partner & Relationship",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+    image: "https://media.licdn.com/dms/image/v2/D5635AQHNxpoD-IZXEA/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1735480978868?e=1742472000&v=beta&t=uazFAMVVgvFEGQVrh62ORRnumcv8nNhsk3xn5wuRlX0",
     skills: ["Python", "TensorFlow", "Deep Learning"],
     rating: 4.8
   },
   {
-    name: "Sarah Smith",
+    name: "Manikant Singh",
     role: "Blockchain Enthusiast",
     status: "Open for Professional Connections",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQGsJkLXOXLK7A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1705076777573?e=1747267200&v=beta&t=RAAcTKPom1iU-LpCmql6ZjqK742ZRQ7k4d5CEzqmytQ",
     skills: ["Solidity", "Web3", "Smart Contracts"],
     rating: 4.9
   },
   {
-    name: "Rahul Kumar",
-    role: "Full Stack Developer",
+    name: "Divya Satpute",
+    role: "DevOps Maestro",
     status: "Interested in Networking & Dating",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
-    skills: ["React", "Node.js", "MongoDB"],
+    image: "https://media.licdn.com/dms/image/v2/D4D35AQHaPC4x5uP8qA/profile-framedphoto-shrink_800_800/B4DZTrCvvUG4Ak-/0/1739110153438?e=1742472000&v=beta&t=C7BVfxLaYafAm-Zc4MeBA3FrwQ3a3Z8mDdL-NALA27g",
+    skills: ["Kubernetes", "Kiali", "Ingress"],
     rating: 4.7
   }
 ];

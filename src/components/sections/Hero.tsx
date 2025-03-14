@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Heart, Code } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa'; // Import WhatsApp icon
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -50,8 +51,9 @@ const Hero = () => {
             <ArrowRight className="inline-block ml-2 h-5 w-5 transform transition-transform group-hover:translate-x-1" />
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-lg" />
           </button>
-          <button className="px-8 py-4 text-lg font-medium rounded-full border-2 border-purple-400 text-purple-600 hover:bg-purple-50 transform transition-all duration-300 hover:scale-105">
-            Learn More
+          <button className="px-8 py-4 text-lg font-medium rounded-full border-2 border-green-500 text-green-600 hover:bg-green-50 transform transition-all duration-300 hover:scale-105 flex items-center justify-center">
+            <FaWhatsapp className="inline-block mr-2 h-5 w-5" />
+            Join WhatsApp
           </button>
         </div>
       </div>

@@ -56,7 +56,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         <div className="p-4 border-t">
           <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-pink-50 transition-colors duration-200 cursor-pointer">
             <img
-              src="https://media.licdn.com/dms/image/v2/D5603AQEP_ERr1vHOfw/profile-displayphoto-shrink_800_800/B56ZRLeTnpHIAc-/0/1736433039697?e=1747267200&v=beta&t=zww0a3-FihNvOl_oPYOO6x8fdEiOOLgFQMz-x-s6L8k"
+              src="https://media.licdn.com/dms/image/v2/D5603AQHRejZDNuir1Q/profile-displayphoto-shrink_800_800/B56ZWoX6xXGsAc-/0/1742286598329?e=1747872000&v=beta&t=aWcfPr2z28zmZn1nZrHBjExEg1uiW154BuVqngEzpeE"
               alt="Profile"
               className="h-10 w-10 rounded-full object-cover"
             />

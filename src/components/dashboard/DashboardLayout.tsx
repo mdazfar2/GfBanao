@@ -1,13 +1,20 @@
-import React from 'react';
-import { Home, GraduationCap, MessageCircle, Users, TrendingUp, Settings, Rocket, Menu, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { Home, GraduationCap, Heart, MessageCircle, Users, TrendingUp, Settings, Rocket, Menu, X } from 'lucide-react';
 import Sidebar from './Sidebar';
 import StartPost from './StartPost';
 import TrendingTopics from './TrendingTopics';
 import PeopleYouMayLike from './PeopleYouMayLike';
 import Feed from './Feed';
+import MatchesPage from '../matches/MatchesPage';
 
 const DashboardLayout = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const handleNavigation = (page: string) => {
+    setCurrentPage(page);
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -20,25 +27,33 @@ const DashboardLayout = () => {
       </button>
 
       {/* Sidebar */}
-      <Sidebar isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+      <Sidebar 
+        isOpen={isMobileMenuOpen} 
+        onClose={() => setIsMobileMenuOpen(false)} 
+        onNavigate={handleNavigation}
+      />
 
       {/* Main Content */}
       <div className="lg:ml-64 xl:ml-80">
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Main Feed */}
-            <div className="lg:col-span-2 space-y-6">
-              <StartPost />
-              <Feed />
-            </div>
+        {currentPage === 'matches' && <MatchesPage />}
+        {currentPage === 'learn' && <LearnPage />}
+        {currentPage === 'home' && (
+          <div className="max-w-7xl mx-auto px-4 py-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Main Feed */}
+              <div className="lg:col-span-2 space-y-6">
+                <StartPost />
+                <Feed />
+              </div>
 
-            {/* Right Sidebar */}
-            <div className="space-y-6">
-              <TrendingTopics />
-              <PeopleYouMayLike />
+              {/* Right Sidebar */}
+              <div className="space-y-6">
+                <TrendingTopics />
+                <PeopleYouMayLike />
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

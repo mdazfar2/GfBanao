@@ -9,8 +9,8 @@ const courses = [
     progress: 65,
     enrolled: 1234,
     author: {
-      name: "Sarah Chen",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&q=80"
+      name: "Anuj Gaurave",
+      avatar: "/anuj.webp"
     }
   },
   {
@@ -20,19 +20,19 @@ const courses = [
     progress: 30,
     enrolled: 856,
     author: {
-      name: "Mike Johnson",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&q=80"
+      name: "Raviranjan Kumar",
+      avatar: "/ravi.webp"
     }
   },
   {
     title: "Build a Dating App with Node.js",
     thumbnail: "https://images.unsplash.com/photo-1661961110372-8a7682543120?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     difficulty: "Advanced",
-    progress: 0,
+    progress: 23,
     enrolled: 567,
     author: {
-      name: "Alex Chen",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=128&q=80"
+      name: "Sachin Singh",
+      avatar: "/sachin.webp"
     }
   }
 ];

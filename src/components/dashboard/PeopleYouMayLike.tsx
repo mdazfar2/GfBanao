@@ -5,7 +5,7 @@ const profiles = [
   {
     name: "Manikant Singh",
     role: "Frontend Developer",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQGsJkLXOXLK7A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1705076777573?e=1747267200&v=beta&t=RAAcTKPom1iU-LpCmql6ZjqK742ZRQ7k4d5CEzqmytQ",
+    image: "/mani.webp",
     skills: ["React", "TypeScript"],
     match: 92
   },
@@ -19,7 +19,7 @@ const profiles = [
   {
     name: "Anuj Gaurave",
     role: "UX Designer",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQF26gs73A5ZEw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731777802395?e=1747267200&v=beta&t=mbvz0ITaeAHp4JFe0soJccVHdKnXDcMu4UbD-ObuSdo",
+    image: "/anuj.webp",
     skills: ["Figma", "UI/UX"],
     match: 88
   }

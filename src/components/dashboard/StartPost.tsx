@@ -17,7 +17,7 @@ const StartPost = () => {
     <div className="bg-white rounded-xl shadow-md p-6">
       <div className="flex items-start space-x-4">
         <img
-          src="https://media.licdn.com/dms/image/v2/D5603AQHRejZDNuir1Q/profile-displayphoto-shrink_800_800/B56ZWoX6xXGsAc-/0/1742286598329?e=1747872000&v=beta&t=aWcfPr2z28zmZn1nZrHBjExEg1uiW154BuVqngEzpeE"
+          src="/azfar.webp"
           alt="Profile"
           className="h-12 w-12 rounded-full object-cover"
         />

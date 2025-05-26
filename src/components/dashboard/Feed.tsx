@@ -7,7 +7,7 @@ const posts = [
     author: {
       name: "Nitish Kumar",
       role: "Full Stack Developer",
-      image: "https://media.licdn.com/dms/image/v2/D5635AQHNxpoD-IZXEA/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1735480978868?e=1743613200&v=beta&t=RTpe_pmyypmCcsdVo3ATxHowO85yIMvQM3kiR1U8l8o"
+      image: "/nitish.webp"
     },
     content: "Just completed my first full-stack project using React and Node.js! Looking for someone to review my code and maybe grab a coffee? 😊",
     tags: ["#WebDevelopment", "#React", "#NodeJS"],
@@ -20,7 +20,7 @@ const posts = [
     author: {
       name: "Raviranjan Kumar",
       role: "AI Engineer",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQEzAXQvwPb2Tg/profile-displayphoto-shrink_800_800/B56ZXLf_VQHQAc-/0/1742875916963?e=1748476800&v=beta&t=AxrI_ZTzzwTKOcfFpJckG1S8a5VRBOc_Qeint_9o5hQ"
+      image: "ravi.webp"
     },
     content: "Found my perfect match on GfBanao! Both of us are AI enthusiasts and now we're building a startup together. Dreams do come true! ❤️",
     tags: ["#LoveInTech", "#AI", "#Success"],
@@ -100,7 +100,7 @@ const Feed = () => {
           {/* Comment Input */}
           <div className="mt-4 flex items-center space-x-3">
             <img
-              src="https://media.licdn.com/dms/image/v2/D5603AQHRejZDNuir1Q/profile-displayphoto-shrink_800_800/B56ZWoX6xXGsAc-/0/1742286598329?e=1747872000&v=beta&t=aWcfPr2z28zmZn1nZrHBjExEg1uiW154BuVqngEzpeE"
+              src="/azfar.webp"
               alt="Your profile"
               className="h-8 w-8 rounded-full object-cover"
             />

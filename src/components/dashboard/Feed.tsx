@@ -1,5 +1,11 @@
 import React from 'react';
-import { MessageCircle, Heart, Share2, Bookmark } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCommentDots,
+  faHeart as faSolidHeart,
+  faShare,
+  faBookmark
+} from '@fortawesome/free-solid-svg-icons';
 
 const posts = [
   {
@@ -81,19 +87,19 @@ const Feed = () => {
           <div className="mt-6 flex items-center justify-between">
             <div className="flex space-x-6">
               <button className="flex items-center space-x-2 text-gray-500 hover:text-pink-600 transition-colors duration-200">
-                <Heart className="h-5 w-5" />
+                <FontAwesomeIcon icon={faSolidHeart} className="h-5 w-5" />
                 <span>{post.likes}</span>
               </button>
               <button className="flex items-center space-x-2 text-gray-500 hover:text-pink-600 transition-colors duration-200">
-                <MessageCircle className="h-5 w-5" />
+                <FontAwesomeIcon icon={faCommentDots} className="h-5 w-5" />
                 <span>{post.comments}</span>
               </button>
               <button className="flex items-center space-x-2 text-gray-500 hover:text-pink-600 transition-colors duration-200">
-                <Share2 className="h-5 w-5" />
+                <FontAwesomeIcon icon={faShare} className="h-5 w-5" />
               </button>
             </div>
             <button className="text-gray-500 hover:text-pink-600 transition-colors duration-200">
-              <Bookmark className="h-5 w-5" />
+              <FontAwesomeIcon icon={faBookmark} className="h-5 w-5" />
             </button>
           </div>
 

@@ -1,5 +1,14 @@
 import React from 'react';
-import { Search, Heart, MapPin, MessageCircle, Star, Users, Lightbulb } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faSearch,
+  faHeart,
+  faMapMarkerAlt,
+  faCommentDots,
+  faStar,
+  faUsers,
+  faLightbulb
+} from '@fortawesome/free-solid-svg-icons';
 
 const matches = [
   {
@@ -90,7 +99,7 @@ const MatchesPage = () => {
             <div className="bg-white rounded-xl shadow-md p-4 mb-8">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                  <FontAwesomeIcon icon={faSearch} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                   <input
                     type="text"
                     placeholder="Search matches..."
@@ -137,7 +146,7 @@ const MatchesPage = () => {
                     <h3 className="text-xl font-semibold text-gray-900 mb-1">{match.name}</h3>
                     <p className="text-gray-600 mb-2">{match.role}</p>
                     <div className="flex items-center text-gray-500 text-sm mb-4">
-                      <MapPin className="w-4 h-4 mr-1" />
+                      <FontAwesomeIcon icon={faMapMarkerAlt} className="w-4 h-4 mr-1" />
                       {match.location}
                     </div>
                     <div className="flex flex-wrap gap-2 mb-6">
@@ -152,11 +161,11 @@ const MatchesPage = () => {
                     </div>
                     <div className="flex space-x-2">
                       <button className="flex-1 flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:shadow-lg transition-shadow duration-200">
-                        <MessageCircle className="w-4 h-4" />
+                        <FontAwesomeIcon icon={faCommentDots} className="w-4 h-4" />
                         <span>Message</span>
                       </button>
                       <button className="flex items-center justify-center px-4 py-2 border-2 border-purple-400 text-purple-600 rounded-full hover:bg-purple-50 transition-colors duration-200">
-                        <Heart className="w-4 h-4" />
+                        <FontAwesomeIcon icon={faHeart} className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
@@ -170,7 +179,7 @@ const MatchesPage = () => {
             {/* Top Matches Today */}
             <div className="bg-white rounded-xl shadow-md p-6">
               <div className="flex items-center space-x-2 mb-6">
-                <Star className="h-5 w-5 text-pink-500" />
+                <FontAwesomeIcon icon={faStar} className="h-5 w-5 text-pink-500" />
                 <h2 className="text-lg font-semibold">Top Matches Today</h2>
               </div>
               <div className="space-y-4">
@@ -194,7 +203,7 @@ const MatchesPage = () => {
             {/* Tip of the Day */}
             <div className="bg-white rounded-xl shadow-md p-6">
               <div className="flex items-center space-x-2 mb-4">
-                <Lightbulb className="h-5 w-5 text-yellow-500" />
+                <FontAwesomeIcon icon={faLightbulb} className="h-5 w-5 text-yellow-500" />
                 <h2 className="text-lg font-semibold">Tip of the Day</h2>
               </div>
               <p className="text-gray-700 text-sm leading-relaxed">
@@ -205,22 +214,22 @@ const MatchesPage = () => {
             {/* People Who Liked You */}
             <div className="bg-white rounded-xl shadow-md p-6">
               <div className="flex items-center space-x-2 mb-6">
-                <Users className="h-5 w-5 text-pink-500" />
+                <FontAwesomeIcon icon={faUsers} className="h-5 w-5 text-pink-500" />
                 <h2 className="text-lg font-semibold">People Who Liked You</h2>
               </div>
               <div className="flex -space-x-2">
                 <img
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+                  src="/nitish.webp"
                   alt="Profile"
                   className="w-8 h-8 rounded-full border-2 border-white"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+                  src="https://images.rawpixel.com/image_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA4L3Jhd3BpeGVsX29mZmljZV8zNV9iZWF1dGlmdWxfc21pbGluZ195b3VuZ19pbmRpYW5fYnVzaW5lc3Nfd29tYV8yYWM3MjMyNS1jZmU3LTQ5ODgtODBkNi03YjViZTg3ODYzNjNfMS5qcGc.jpg"
                   alt="Profile"
                   className="w-8 h-8 rounded-full border-2 border-white"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+                  src="/ravi.webp"
                   alt="Profile"
                   className="w-8 h-8 rounded-full border-2 border-white"
                 />

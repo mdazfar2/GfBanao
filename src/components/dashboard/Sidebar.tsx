@@ -1,5 +1,15 @@
 import React from 'react';
-import { Home, GraduationCap, Heart, MessageCircle, Users, TrendingUp, Settings, Rocket } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faHome,
+  faGraduationCap,
+  faHeart,
+  faMessage,
+  faUsers,
+  faChartLine,
+  faCog,
+  faRocket
+} from '@fortawesome/free-solid-svg-icons';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -8,14 +18,14 @@ interface SidebarProps {
 }
 
 const menuItems = [
-  { id: 'home', icon: Home, label: 'Home', href: '#' },
-  { id: 'learn', icon: GraduationCap, label: 'Learn', href: '#' },
-  { id: 'matches', icon: Heart, label: 'Matches', href: '#' },
-  { id: 'messages', icon: MessageCircle, label: 'Messages', href: '#' },
-  { id: 'community', icon: Users, label: 'Community', href: '#' },
-  { id: 'trending', icon: TrendingUp, label: 'Trending Tech', href: '#' },
-  { id: 'projects', icon: Rocket, label: 'Projects', href: '#' },
-  { id: 'settings', icon: Settings, label: 'Settings', href: '#' },
+  { id: 'home', icon: faHome, label: 'Home', href: '#' },
+  { id: 'learn', icon: faGraduationCap, label: 'Learn', href: '#' },
+  { id: 'matches', icon: faHeart, label: 'Matches', href: '#' },
+  { id: 'messages', icon: faMessage, label: 'Messages', href: '#' },
+  { id: 'community', icon: faUsers, label: 'Community', href: '#' },
+  { id: 'trending', icon: faChartLine, label: 'Trending Tech', href: '#' },
+  { id: 'projects', icon: faRocket, label: 'Projects', href: '#' },
+  { id: 'settings', icon: faCog, label: 'Settings', href: '#' },
 ];
 
 const Sidebar = ({ isOpen, onClose, onNavigate }: SidebarProps) => {
@@ -34,7 +44,6 @@ const Sidebar = ({ isOpen, onClose, onNavigate }: SidebarProps) => {
         {/* Logo */}
         <div className="p-6 border-b">
           <div className="flex items-center space-x-2">
-          
             <img src="/gfbanao.png" alt="GfBanao Logo" className="h-9 w-9 rounded" />
             <span className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
               GfBanao
@@ -51,7 +60,7 @@ const Sidebar = ({ isOpen, onClose, onNavigate }: SidebarProps) => {
                   onClick={() => handleClick(item.id)}
                   className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200"
                 >
-                  <item.icon className="h-5 w-5" />
+                  <FontAwesomeIcon icon={item.icon} className="h-5 w-5" />
                   <span className="font-medium">{item.label}</span>
                 </button>
               </li>

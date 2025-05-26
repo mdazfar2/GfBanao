@@ -6,6 +6,7 @@ import TrendingTopics from './TrendingTopics';
 import PeopleYouMayLike from './PeopleYouMayLike';
 import Feed from './Feed';
 import MatchesPage from '../matches/MatchesPage';
+import LearnPage from '../learn/LearnPage';
 
 const DashboardLayout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

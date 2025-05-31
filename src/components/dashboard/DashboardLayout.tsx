@@ -8,6 +8,7 @@ import Feed from './Feed';
 import MatchesPage from '../matches/MatchesPage';
 import LearnPage from '../learn/LearnPage';
 import MessagesPage from '../messages/MessagesPage';
+import CommunityPage from '../community/CommunityPage';
 
 const DashboardLayout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,6 +41,7 @@ const DashboardLayout = () => {
         {currentPage === 'matches' && <MatchesPage />}
         {currentPage === 'learn' && <LearnPage />}
         {currentPage === 'messages' && <MessagesPage />}
+        {currentPage === 'community' && <CommunityPage />}
         {currentPage === 'home' && (
           <div className="max-w-7xl mx-auto px-4 py-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

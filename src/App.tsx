@@ -1,5 +1,4 @@
-// src/App.tsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/sections/Hero';
@@ -13,9 +12,24 @@ import HowItWorks from './components/sections/HowItWorks';
 import Categories from './components/sections/Categories';
 import TrendingProfiles from './components/sections/TrendingProfiles';
 import ImplementationRoadmap from './components/sections/ImplementationRoadmap';
-
+import LoadingScreen from './components/LoadingScreen';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <Router>
       <div className="relative min-h-screen">

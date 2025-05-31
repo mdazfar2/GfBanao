@@ -12,23 +12,23 @@ import HowItWorks from './components/sections/HowItWorks';
 import Categories from './components/sections/Categories';
 import TrendingProfiles from './components/sections/TrendingProfiles';
 import ImplementationRoadmap from './components/sections/ImplementationRoadmap';
-import LoadingScreen from './components/LoadingScreen';
+// import LoadingScreen from './components/LoadingScreen';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
+  // useEffect(() => {
+  //   // Simulate loading time
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 2000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  if (isLoading) {
-    return <LoadingScreen />;
-  }
+  // if (isLoading) {
+  //   return <LoadingScreen />;
+  // }
 
   return (
     <Router>

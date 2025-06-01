@@ -49,7 +49,7 @@ function App() {
               <Footer />
             </>
           } />
-          <Route path="/dashboard" element={<DashboardLayout />} />
+          <Route path="/dashboard/*" element={<DashboardLayout />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
@@ -57,4 +57,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

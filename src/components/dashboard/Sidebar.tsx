@@ -10,6 +10,7 @@ import {
   faCog,
   faRocket
 } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -18,19 +19,23 @@ interface SidebarProps {
 }
 
 const menuItems = [
-  { id: 'home', icon: faHome, label: 'Home', href: '#' },
-  { id: 'learn', icon: faGraduationCap, label: 'Learn', href: '#' },
-  { id: 'matches', icon: faHeart, label: 'Matches', href: '#' },
-  { id: 'messages', icon: faMessage, label: 'Messages', href: '#' },
-  { id: 'community', icon: faUsers, label: 'Community', href: '#' },
-  { id: 'trending', icon: faChartLine, label: 'Trending Tech', href: '#' },
-  { id: 'projects', icon: faRocket, label: 'Projects', href: '#' },
-  { id: 'settings', icon: faCog, label: 'Settings', href: '#' },
+  { id: 'home', icon: faHome, label: 'Home', path: '/dashboard' },
+  { id: 'learn', icon: faGraduationCap, label: 'Learn', path: '/dashboard/learn' },
+  { id: 'matches', icon: faHeart, label: 'Matches', path: '/dashboard/matches' },
+  { id: 'messages', icon: faMessage, label: 'Messages', path: '/dashboard/messages' },
+  { id: 'community', icon: faUsers, label: 'Community', path: '/dashboard/community' },
+  { id: 'trending', icon: faChartLine, label: 'Trending Tech', path: '/dashboard/trending' },
+  { id: 'projects', icon: faRocket, label: 'Projects', path: '/dashboard/projects' },
+  { id: 'settings', icon: faCog, label: 'Settings', path: '/dashboard/settings' },
 ];
 
 const Sidebar = ({ isOpen, onClose, onNavigate }: SidebarProps) => {
-  const handleClick = (itemId: string) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleClick = (itemId: string, path: string) => {
     onNavigate(itemId);
+    navigate(path);
     onClose();
   };
 
@@ -57,8 +62,12 @@ const Sidebar = ({ isOpen, onClose, onNavigate }: SidebarProps) => {
             {menuItems.map((item) => (
               <li key={item.id}>
                 <button
-                  onClick={() => handleClick(item.id)}
-                  className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200"
+                  onClick={() => handleClick(item.id, item.path)}
+                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors duration-200 ${
+                    location.pathname === item.path
+                      ? 'bg-pink-50 text-pink-600'
+                      : 'text-gray-700 hover:bg-pink-50 hover:text-pink-600'
+                  }`}
                 >
                   <FontAwesomeIcon icon={item.icon} className="h-5 w-5" />
                   <span className="font-medium">{item.label}</span>

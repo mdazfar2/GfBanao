@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Home, GraduationCap, Heart, MessageCircle, Users, TrendingUp, Settings, Rocket, Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { useLocation, Routes, Route, Navigate } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import Sidebar from './Sidebar';
 import StartPost from './StartPost';
 import TrendingTopics from './TrendingTopics';
@@ -12,7 +13,20 @@ import CommunityPage from '../community/CommunityPage';
 
 const DashboardLayout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState('home');
+  const location = useLocation();
+
+  // Extract the current page from the URL path
+  const getCurrentPage = (path: string) => {
+    const segments = path.split('/');
+    return segments[2] || 'home';
+  };
+
+  const [currentPage, setCurrentPage] = useState(getCurrentPage(location.pathname));
+
+  // Update currentPage when location changes
+  useEffect(() => {
+    setCurrentPage(getCurrentPage(location.pathname));
+  }, [location]);
 
   const handleNavigation = (page: string) => {
     setCurrentPage(page);
@@ -38,27 +52,27 @@ const DashboardLayout = () => {
 
       {/* Main Content */}
       <div className="lg:ml-64 xl:ml-80">
-        {currentPage === 'matches' && <MatchesPage />}
-        {currentPage === 'learn' && <LearnPage />}
-        {currentPage === 'messages' && <MessagesPage />}
-        {currentPage === 'community' && <CommunityPage />}
-        {currentPage === 'home' && (
-          <div className="max-w-7xl mx-auto px-4 py-8">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Main Feed */}
-              <div className="lg:col-span-2 space-y-6">
-                <StartPost />
-                <Feed />
-              </div>
-
-              {/* Right Sidebar */}
-              <div className="space-y-6">
-                <TrendingTopics />
-                <PeopleYouMayLike />
+        <Routes>
+          <Route path="/" element={
+            <div className="max-w-7xl mx-auto px-4 py-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="lg:col-span-2 space-y-6">
+                  <StartPost />
+                  <Feed />
+                </div>
+                <div className="space-y-6">
+                  <TrendingTopics />
+                  <PeopleYouMayLike />
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          } />
+          <Route path="/matches" element={<MatchesPage />} />
+          <Route path="/learn" element={<LearnPage />} />
+          <Route path="/messages" element={<MessagesPage />} />
+          <Route path="/community" element={<CommunityPage />} />
+          <Route path="*" element={<Navigate to="/dashboard" />} />
+        </Routes>
       </div>
     </div>
   );

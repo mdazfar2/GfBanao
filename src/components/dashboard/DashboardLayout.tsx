@@ -12,6 +12,7 @@ import MessagesPage from '../messages/MessagesPage';
 import CommunityPage from '../community/CommunityPage';
 import TrendingTechPage from '../trending/TrendingTechPage';
 import ProjectsPage from '../projects/ProjectsPage';
+import SettingsPage from '../settings/SettingsPage';
 
 const DashboardLayout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -75,6 +76,7 @@ const DashboardLayout = () => {
           <Route path="/community" element={<CommunityPage />} />
           <Route path="/trending" element={<TrendingTechPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
           <Route path="*" element={<Navigate to="/dashboard" />} />
         </Routes>
       </div>

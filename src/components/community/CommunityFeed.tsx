@@ -16,7 +16,7 @@ const categoryPosts = {
         role: "Full Stack Developer",
         image: "https://th.bing.com/th/id/OIP.tkEKutVlMagfZOJn4_T8lQHaIv?cb=iwp2&rs=1&pid=ImgDetMain"
       },
-      content: "Just launched my first React + Node.js project! Looking for feedback and maybe some collaboration opportunities. Check it out: github.com/sarahchen/awesome-project",
+      content: "Just launched my first React + Node.js project! Looking for feedback and maybe some collaboration opportunities. Check it out: github.com/azfar alam/awesome-project",
       tags: ["#React", "#NodeJS", "#OpenSource"],
       likes: 124,
       comments: 18,

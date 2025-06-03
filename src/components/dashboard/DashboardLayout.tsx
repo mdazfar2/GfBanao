@@ -10,6 +10,8 @@ import MatchesPage from '../matches/MatchesPage';
 import LearnPage from '../learn/LearnPage';
 import MessagesPage from '../messages/MessagesPage';
 import CommunityPage from '../community/CommunityPage';
+import TrendingTechPage from '../trending/TrendingTechPage';
+import ProjectsPage from '../projects/ProjectsPage';
 
 const DashboardLayout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -57,7 +59,7 @@ const DashboardLayout = () => {
             <div className="max-w-7xl mx-auto px-4 py-8">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2 space-y-6">
-                  <StartPost />
+                  
                   <Feed />
                 </div>
                 <div className="space-y-6">
@@ -71,6 +73,8 @@ const DashboardLayout = () => {
           <Route path="/learn" element={<LearnPage />} />
           <Route path="/messages" element={<MessagesPage />} />
           <Route path="/community" element={<CommunityPage />} />
+          <Route path="/trending" element={<TrendingTechPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route path="*" element={<Navigate to="/dashboard" />} />
         </Routes>
       </div>

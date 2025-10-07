@@ -12,6 +12,7 @@ import HowItWorks from './components/sections/HowItWorks';
 import Categories from './components/sections/Categories';
 import TrendingProfiles from './components/sections/TrendingProfiles';
 import ImplementationRoadmap from './components/sections/ImplementationRoadmap';
+import NotFoundPAge from './components/NotFoundPage';
 // import LoadingScreen from './components/LoadingScreen';
 
 function App() {
@@ -50,7 +51,7 @@ function App() {
             </>
           } />
           <Route path="/dashboard/*" element={<DashboardLayout />} />
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<NotFoundPAge />} />
         </Routes>
       </div>
     </Router>

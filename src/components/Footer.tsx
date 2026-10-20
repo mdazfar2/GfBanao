@@ -53,7 +53,22 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/20 text-center text-white/60 text-sm">
-          <p>&copy; {new Date().getFullYear()} GfBanao - All Rights Reserved. | Developed by <a href="https://github.com/mdazfar2" className="underline">Azfar Alam</a></p>
+          <p>
+            &copy; {new Date().getFullYear()} GfBanao - All Rights Reserved. | Developed by{' '}
+            <a
+              href="https://azfaralam.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Azfar Alam (opens in a new tab)"
+              className="ml-1 inline-flex h-6 w-6 -translate-y-0.5 items-center justify-center rounded-full align-middle transition-transform duration-200 hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              <img
+                src="/Azfar-fevico.webp"
+                alt=""
+                className="h-full w-full object-contain"
+              />
+            </a>
+          </p>
         </div>
       </div>
     </footer>
